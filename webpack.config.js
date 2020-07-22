@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 const javascriptRules = {
   test: /\.js$/, // Search for any file with .js extension, to...
   exclude: /node_modules/, //...exclude node_modules and...
@@ -12,9 +14,13 @@ const javascriptRules = {
 
 module.exports = {
   output: {
-    filename: "app.js"
+    filename: "app.[contentHash].js"
   },
   module: {
     rules: [javascriptRules]
-  }
+  },
+  plugins: [new HtmlWebpackPlugin({
+      title: "Starting webpack with React",
+      template: "src/index.html"
+  })]
 };
