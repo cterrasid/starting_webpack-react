@@ -27,6 +27,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.10.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

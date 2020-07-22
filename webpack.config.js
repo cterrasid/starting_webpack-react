@@ -5,12 +5,15 @@ const javascriptRules = {
     //...use a loader (babel), as below:
     loader: "babel-loader",
     options: {
-      presets: ["@babel/preset-react"]
+      presets: ["@babel/preset-react", "@babel/preset-env"]
     }
   }
 };
 
 module.exports = {
+  output: {
+    filename: "app.js"
+  },
   module: {
     rules: [javascriptRules]
   }
